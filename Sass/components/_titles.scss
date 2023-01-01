@@ -1,0 +1,25 @@
+.section-title {
+   font-family: "Raleway", sans-serif;
+   font-weight: 700;
+   font-size: 42px;
+   line-height: 1.17;
+   letter-spacing: 0.05em;
+}
+
+.pre-title {
+   font-weight: 600;
+   font-size: 11px;
+   line-height: 1.36;
+   text-transform: uppercase;
+   display: flex;
+   align-items: center;
+}
+
+.pre-title::before {
+   content: "";
+
+   width: 60px;
+   height: 1px;
+   background-color: currentColor;
+   margin-right: 20px;
+}

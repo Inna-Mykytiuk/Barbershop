@@ -1,0 +1,121 @@
+.about__container {
+   display: flex;
+   gap: 30px;
+   
+}
+
+.pic-list {
+   display: flex;
+   gap: 30px;
+   flex-wrap: wrap;
+   @media screen and (max-width: 767px) {
+      display: none;
+   }
+   @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+   }
+}
+
+.pic-list__item {
+   display: block;
+   // @media screen and (max-width: 767px) {
+   // display: block;
+   // width: 330px;
+   // }
+   
+}
+
+.about__wrap {
+   
+   @media screen and (min-width: 767px) {
+      // width: 330px;
+      width: 100%;
+   }
+   @media screen and (min-width: 1200px) {
+      width: 470px;
+   }
+}
+
+.about__pre-title {
+   color: var(--title-text-color);
+   margin-bottom: 20px;
+   display: flex;
+   align-items: center;
+   &::before {
+      content: "";
+
+   width: 60px;
+   height: 1px;
+   background-color: #303030;
+   margin-right: 20px;
+   }
+}
+
+.about__title {
+   color: var(--title-text-color);
+   margin-bottom: 20px;
+   font-weight: 700;
+   letter-spacing: 0.05em;
+   @include mobile {
+   font-size: 28px;
+   line-height: 1.17;
+   }
+   @include tablet {
+   font-size: 28px;
+   line-height: 1.17;
+   }
+   @include desktop {
+   font-size: 42px;
+   line-height: 1.16;
+   }
+}
+
+.about__after-title {
+   font-size: 18px;
+   line-height: 1.67;
+   letter-spacing: 0.02em;
+   color: var(--after-title);
+
+   margin-bottom: 20px;
+   @media screen and (max-width: 767px) {
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1.62;
+
+   letter-spacing: 0.02em;
+   }
+}
+
+.about__text {
+   font-size: 14px;
+   line-height: 1.86;
+   letter-spacing: 0.02em;
+   color: var(--after-title);
+   @include mobile {
+      margin-bottom: 40px;
+   }
+   @media screen and (min-width: 768px) {
+   margin-bottom: 77px;
+   }
+   @media screen and (min-width: 1200px) {
+   margin-bottom: 42px;
+   }
+}
+
+.btn.about__btn {
+   color: var(--hero-color);
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+   @media screen and (max-width: 767px) {
+   display: block;
+   margin: 0 auto;
+   margin-top: 44px;
+   }
+   
+}
+
+.btn.about__btn:hover,
+.btn.form__btn:hover {
+   color: var(--main-btn-color);
+   border: 1px solid #ff6c00;
+}

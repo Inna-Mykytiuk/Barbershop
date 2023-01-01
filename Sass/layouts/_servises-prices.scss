@@ -1,0 +1,216 @@
+.prices.section {
+   @media screen and (max-width: 767px) {
+      padding: 0;
+   }
+}
+
+.prices {
+   margin: 0 auto;
+   max-width: 576px;
+
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   
+   background-color: #111319;
+   background-image: url('../images/prices-image-mobile-min.png');
+}
+
+@include retina {
+   .prices {
+   background-color: #111319;
+   background-image: url('../images/prices-image-mobile@2x-min.png');
+   }
+}
+
+@include retinathird {
+   .prices {
+   background-color: #111319;
+   background-image: url('../images/prices-image-mobile@3x-min.png');
+   }
+}
+
+@include tablet {
+   .prices {
+   max-width: 1199px;
+   background-color: #111319;
+   background-image: url('../images/prices-image-tab-min.png');
+   }
+}
+
+@include retina {
+   .prices {
+   background-color: #111319;
+   background-image: url('../images/prices-image-tab@2x-min.png');
+   }
+}
+
+@include retinathird {
+   .prices {
+   background-color: #111319;
+   background-image: url('../images/prices-image-tab@3x-min.png');
+   }
+}
+
+@include desktop {
+   .prices {
+   max-width: 1600px;
+   background-color: #111319;
+   background-image: url('../images/prices-image-desk-min.png');
+   }
+}
+
+@include retina {
+   .prices {
+   background-color: #111319;
+   background-image: url('../images/prices-image-desk@2x-min.png');
+   }
+}
+
+@include retinathird {
+   .prices {
+   background-color: #111319;
+   background-image: url('../images/prices-image-desk@3x-min.png');
+   }
+}
+
+.price__container {
+   display: flex;
+   padding: 0;
+   width: 100%;
+
+   @include tablet {
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 720px;
+   }
+
+   @include desktop {
+      width: 1200px;
+   }
+}
+
+.prices-wrap {
+   @media screen and (max-width: 1199px) {
+      background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 70%),
+         linear-gradient(90deg, #171a24 0%, rgba(23, 26, 36, 0.2) 70%);
+   }
+
+   @media screen and (min-width: 1200px) {
+      display: flex;
+      gap: 30px;
+   }
+}
+
+.prices-list {
+   @media screen and (max-width: 1200px) {
+      &:first-child {
+         padding: 30px 40px 20px 40px;
+      }
+
+      &:last-child {
+         padding: 0 40px 30px 40px;
+      }
+   }
+
+   @media screen and (min-width: 1200px) {
+      width: 100%;
+      padding: 30px 20px;
+
+      &:first-child {
+         background: linear-gradient(180deg,
+               #171a24 0%,
+               rgba(23, 26, 36, 0.2) 100%);
+      }
+
+      &:last-child {
+         background: linear-gradient(180deg,
+               #171a24 0%,
+               rgba(23, 26, 36, 0.2) 100%);
+      }
+   }
+}
+
+.prices-list__item {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 20px;
+   align-items: baseline;
+   gap: 12px;
+
+   &::after {
+      content: "";
+      flex-grow: 1;
+      height: 1px;
+      background-color: rgba(157, 164, 189, 0.12);
+   }
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+}
+
+.prices__top-text {
+   color: rgba(157, 164, 189, 0.6);
+   margin-bottom: 20px;
+
+   // &::after {
+   //    display: block;
+   //    content: "";
+   //    flex-grow: 1;
+   //    height: 1px;
+   //    background-color: rgba(157, 164, 189, 0.12);
+   // }
+}
+
+.prices-title {
+   // color: #171a24;
+   color: #ffffff;
+
+   margin-bottom: 44px;
+
+   @media screen and (min-width: 450px) {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 1.17;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+   }
+}
+
+.prices-list__text {
+   font-size: 18px;
+   line-height: 1.67;
+   letter-spacing: 0.02em;
+   color: #9da4bd;
+
+   &:last-child {
+      order: 1;
+   }
+
+   @media screen and (max-width: 767px) {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.43;
+      letter-spacing: 0.02em;
+   }
+}
+
+.prices-btn {
+   /* color: var(--second-btn-color); */
+   display: block;
+   margin: 0 auto;
+   margin-top: 44px;
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+   @media screen and (max-width: 767px) {
+      color: white;
+   }
+}
+
+.btn.prices-btn:hover,
+.btn.prices-btn:hover {
+   color: var(--main-btn-color);
+   border: 1px solid #ff6c00;
+}

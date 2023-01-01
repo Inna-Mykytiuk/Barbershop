@@ -1,0 +1,50 @@
+.footer {   
+   padding-top: 30px;
+   padding-bottom: 30px;
+   >.container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   }
+}
+
+.copy-text {
+   font-weight: 600;
+   font-size: 11px;
+   line-height: 1.36;
+   letter-spacing: 0.2em;
+   color: var(--text-color);
+   margin: 0;
+}
+
+.copy-list {
+   display: flex;
+   align-items: center;
+   margin-left: auto;
+   gap: 20px;
+   &::before {
+   content: "";
+
+   width: 60px;
+   height: 1px;
+   background-color: var(--title-text-color);
+   margin-right: 20px;
+   }
+   @include tablet {
+
+   gap: 40px;
+   }
+}
+
+.copy-link {
+   font-weight: 600;
+   font-size: 11px;
+   line-height: 1.36;
+   letter-spacing: 0.2em;
+   color: var(--title-text-color);
+   transition: color 200ms linear;
+   &:hover,
+   &:focus {
+   color: var(--acent-color);
+   }
+}

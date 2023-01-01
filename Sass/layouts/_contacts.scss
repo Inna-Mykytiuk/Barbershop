@@ -1,0 +1,134 @@
+.contact-wrap {
+   // background-image: url(../images/bg.png);
+   background-color: #191c26;
+   background-repeat: no-repeat;
+   background-size: calc(100% / 2 - 15px) 100%;
+   background-position: right;
+   // min-width: 1600px;
+   margin: 0 auto;
+   
+   @media screen and (min-width: 767px) {
+   display: block;
+   }
+   
+
+}
+
+// .contact__container {
+//    @include desktop {
+// display: flex;
+//    justify-content: space-between;
+//    }
+// }
+
+.contact__container {
+   
+   @include mobile {
+   display: flex;
+   flex-direction: column;
+
+   // width: 100%;
+   }
+
+   @include tablet {
+      display: flex;
+      // flex-direction: row;
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 720px;
+   }
+
+   @include desktop {
+      display: flex;
+      flex-direction: row;
+      width: 1200px;
+   }
+}
+
+
+.contacts {
+   @include mobile {
+   display: block;
+   margin: 0 auto;
+
+   }
+   
+   @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0;
+   }
+   // @media screen and (min-width: 1200px) {
+   // width: calc(100% / 2 - 15px);
+   // padding-left: 100px;
+   // }
+   @include desktop {
+   display: block;
+   margin: 0 auto;
+   }
+   
+}
+
+.contacts-title {
+   color: var(--main-white-color);
+   margin-bottom: 44px;
+   font-weight: 700;
+   font-size: 42px;
+   line-height: 1.16;
+   letter-spacing: 0.05em;
+   @include mobile {
+
+   text-align: center;
+   }
+   // @include tablet {
+   // text-align: start;
+   // }
+
+   @include desktop {
+   text-align: start;
+   }
+}
+
+.contacts-address {
+   margin-bottom: 70px;
+}
+
+.contacts-map-link {
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 1.67;
+   letter-spacing: 0.02em;
+   color: var(--text-color);
+   margin-bottom: 20px;
+   display: inline-block;
+}
+
+.contacts-item:not(:last-child) {
+   margin-bottom: 20px;
+}
+
+.contacts-link {
+   font-size: 18px;
+   line-height: 1.36;
+   letter-spacing: 0.02em;
+   color: var(--text-color);
+}
+
+.contacts-subtitle {
+   font-weight: 600;
+   font-size: 11px;
+   line-height: 1.36;
+   text-transform: uppercase;
+   color: var(--main-white-color);
+
+   margin-bottom: 20px;
+}
+
+.contacts-time {
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 1.67;
+   letter-spacing: 0.02em;
+   color: var(--text-color);
+}
